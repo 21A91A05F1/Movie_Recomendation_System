@@ -149,3 +149,38 @@ Detailed Explanation
 TF-IDF Vectorizer: It transforms text into feature vectors where each word has a weight based on its frequency and the number of documents it appears in. This helps in highlighting important words.
 Cosine Similarity: Measures how similar two documents are, regardless of their size. It's used here to find movies with similar overviews.
 Recommendation Function: Finds the index of the given movie, computes similarity scores with other movies, sorts them, and returns the top 10 similar movies.
+
+
+
+
+
+
+
+
+Based on the code provided in your movie recommendation system project, you have primarily used the TF-IDF Vectorization and 
+Cosine Similarity algorithms. Here's a brief explanation of each:
+
+1. TF-IDF Vectorization
+TF-IDF (Term Frequency-Inverse Document Frequency): This algorithm transforms text data into numerical representations, which are 
+essential for machine learning models. It works by:
+Term Frequency (TF): Measures how frequently a word appears in a document.
+Inverse Document Frequency (IDF): Measures how important a word is by considering how frequently it appears across all documents.
+The product of TF and IDF gives a weight to each word, highlighting important words while reducing the influence of less important ones.
+2. Cosine Similarity
+Cosine Similarity: This algorithm measures the cosine of the angle between two non-zero vectors in a multi-dimensional space. 
+It calculates the similarity between two documents (in this case, movie overviews) regardless of their size:
+If the angle is 0 degrees, the cosine similarity is 1, meaning the documents are identical.
+If the angle is 90 degrees, the cosine similarity is 0, meaning the documents are completely dissimilar.
+The cosine similarity score ranges between 0 and 1, with 1 indicating the highest similarity.
+Summary of Algorithms Used
+TF-IDF Vectorization:
+
+Converts movie overviews into numerical vectors.
+Highlights important words and reduces the influence of less important ones.
+Cosine Similarity:
+
+Computes the similarity between movie vectors.
+Helps in identifying and recommending movies that are similar to a given movie.
+These algorithms are used together to build the recommendation engine in your project. The TF-IDF Vectorizer transforms the 
+textual data into a format suitable for similarity calculations, and the 
+Cosine Similarity algorithm finds and ranks the most similar movies based on this transformed data.
